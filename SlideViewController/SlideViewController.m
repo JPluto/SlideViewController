@@ -10,6 +10,41 @@
 
 #import <QuartzCore/QuartzCore.h>
 
+@interface SlideViewNavigationBar : UINavigationBar {
+@private
+    
+    id <SlideViewNavigationBarDelegate> _slideViewNavigationBarDelegate;
+    
+}
+
+@property (nonatomic, assign) id <SlideViewNavigationBarDelegate> slideViewNavigationBarDelegate;
+
+@end
+
+@implementation SlideViewNavigationBar
+
+@synthesize slideViewNavigationBarDelegate = _slideViewNavigationBarDelegate;
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    [self.delegate slideViewNavigationBar:self touchesBegan:touches withEvent:event];
+    
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    [self.delegate slideViewNavigationBar:self touchesMoved:touches withEvent:event];
+
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    [self.delegate slideViewNavigationBar:self touchesEnded:touches withEvent:event];
+    
+}
+
+@end
+
 @implementation SlideViewController
 
 @synthesize delegate = _delegate;
@@ -18,17 +53,11 @@
 {
     self = [super initWithNibName:@"SlideViewController" bundle:nil];
     if (self) {
-        
-       // _slideNavigationController = [[UINavigationController alloc] init];
-        _slideNavigationController.view.layer.shadowColor = [[UIColor blackColor] CGColor];
-        _slideNavigationController.view.layer.shadowOffset = CGSizeMake(0.0f, 0.0f);
-        _slideNavigationController.view.layer.shadowRadius = 4.0f;
-        _slideNavigationController.view.layer.shadowOpacity = 0.75f;
                 
         _touchView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 320.0f, 44.0f)];
         _touchView.exclusiveTouch = NO;
         
-        _overlayView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 320.0f, 460.0f)];
+        _overlayView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 44.0f, 320.0f, 416.0f)];
         
         _slideNavigationControllerState = kSlideNavigationControllerStateNormal;
         
@@ -49,6 +78,13 @@
 - (void)viewDidLoad {
     
     self.view.backgroundColor = [UIColor grayColor];
+    
+    _slideNavigationController.view.layer.shadowColor = [[UIColor blackColor] CGColor];
+    _slideNavigationController.view.layer.shadowOffset = CGSizeMake(0.0f, 0.0f);
+    _slideNavigationController.view.layer.shadowRadius = 4.0f;
+    _slideNavigationController.view.layer.shadowOpacity = 0.75f;
+    
+    [(SlideViewNavigationBar *)_slideNavigationController.navigationBar setDelegate:self];
     
     UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 320.0f, 44.0f)];
     UIImage *searchBarBackground = [UIImage imageNamed:@"search_bar_background"];
@@ -76,6 +112,13 @@
 
 - (void)menuBarButtonItemPressed:(id)sender {
     
+    if (_slideNavigationControllerState == kSlideNavigationControllerStatePeeking) {
+        
+        [self slideInSlideNavigationControllerView];
+        return;
+        
+    }
+    
     UIViewController *currentViewController = [[_slideNavigationController viewControllers] objectAtIndex:0];
     
     if ([currentViewController conformsToProtocol:@protocol(SlideViewControllerSlideDelegate)] && [currentViewController respondsToSelector:@selector(shouldSlideOut)]) {
@@ -98,7 +141,7 @@
 
 - (void)slideOutSlideNavigationControllerView {
         
-    [UIView animateWithDuration:0.3 delay:0.0f options:UIViewAnimationOptionCurveEaseInOut animations:^{
+    [UIView animateWithDuration:0.2 delay:0.0f options:UIViewAnimationOptionCurveEaseInOut  | UIViewAnimationOptionBeginFromCurrentState animations:^{
         
         _slideNavigationController.view.transform = CGAffineTransformMakeTranslation(260.0f, 0.0f);
         
@@ -113,7 +156,7 @@
 
 - (void)slideInSlideNavigationControllerView {
             
-    [UIView animateWithDuration:0.3 delay:0.0f options:UIViewAnimationOptionCurveEaseInOut animations:^{
+    [UIView animateWithDuration:0.2 delay:0.0f options:UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionBeginFromCurrentState animations:^{
         
         _slideNavigationController.view.transform = CGAffineTransformIdentity;
         
@@ -136,7 +179,14 @@
     if ((CGRectContainsPoint(_slideNavigationController.view.frame, _startingDragPoint)) && _slideNavigationControllerState == kSlideNavigationControllerStatePeeking) {
         
         _slideNavigationControllerState = kSlideNavigationControllerStateDragging;
+        _startingDragTransformTx = _slideNavigationController.view.transform.tx;
+    }
+    
+    if (_startingDragPoint.y <= 44.0f) {
         
+        _slideNavigationControllerState = kSlideNavigationControllerStateDragging;
+        _startingDragTransformTx = _slideNavigationController.view.transform.tx;
+
     }
 }
 
@@ -149,17 +199,22 @@
     
     CGPoint location = [touch locationInView:self.view];
   
-    _slideNavigationController.view.transform = CGAffineTransformMakeTranslation(260 + (location.x - _startingDragPoint.x), 0.0f);
+    [UIView animateWithDuration:0.05f delay:0.0f options:UIViewAnimationOptionCurveLinear | UIViewAnimationOptionBeginFromCurrentState animations:^{
+
+        _slideNavigationController.view.transform = CGAffineTransformMakeTranslation(_startingDragTransformTx + (location.x - _startingDragPoint.x), 0.0f);
+
+    } completion:^(BOOL finished) {
+        
+    }];
     
-    NSLog(@"%f", location.x - _startingDragPoint.x);
-  
+      
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     
     if (_slideNavigationControllerState == kSlideNavigationControllerStateDragging) {
 
-        if (_slideNavigationController.view.transform.tx >= 260.0f) {
+        if (_slideNavigationController.view.transform.tx >= 180.0f) {
             
             [self slideOutSlideNavigationControllerView];            
             
@@ -170,6 +225,24 @@
         }
     
     }
+    
+}
+
+- (void)slideViewNavigationBar:(SlideViewNavigationBar *)navigationBar touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    [self touchesBegan:touches withEvent:event];
+    
+}
+
+- (void)slideViewNavigationBar:(SlideViewNavigationBar *)navigationBar touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    [self touchesMoved:touches withEvent:event];
+    
+}
+
+- (void)slideViewNavigationBar:(SlideViewNavigationBar *)navigationBar touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    
+    [self touchesEnded:touches withEvent:event];
     
 }
 

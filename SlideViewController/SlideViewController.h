@@ -17,6 +17,7 @@ typedef enum {
 } SlideNavigationControllerState;
 
 @class SlideViewController;
+@class SlideViewNavigationBar;
 
 @protocol SlideViewControllerDelegate <NSObject>
 
@@ -36,11 +37,22 @@ typedef enum {
 
 @end
 
-@interface SlideViewController : UIViewController {
+@protocol SlideViewNavigationBarDelegate <NSObject>
+
+- (void)slideViewNavigationBar:(SlideViewNavigationBar *)navigationBar touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
+
+- (void)slideViewNavigationBar:(SlideViewNavigationBar *)navigationBar touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event;
+
+- (void)slideViewNavigationBar:(SlideViewNavigationBar *)navigationBar touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event;
+
+@end
+
+@interface SlideViewController : UIViewController <SlideViewNavigationBarDelegate> {
     
     IBOutlet UINavigationController *_slideNavigationController;
     id <SlideViewControllerDelegate> _delegate;
     CGPoint _startingDragPoint;
+    CGFloat _startingDragTransformTx;
     UIView *_touchView;
     SlideNavigationControllerState _slideNavigationControllerState;
     UIView *_overlayView;
