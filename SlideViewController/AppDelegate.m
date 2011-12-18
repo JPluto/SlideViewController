@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "MySlideViewController.h"
+
 @implementation AppDelegate
 
 @synthesize window = _window;
@@ -23,6 +25,12 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    MySlideViewController *slideViewController = [[MySlideViewController alloc] initWithNibName:@"SlideViewController" bundle:nil];
+    slideViewController.delegate = slideViewController;
+    self.window.rootViewController = slideViewController;
+    [slideViewController release];
+    
     [self.window makeKeyAndVisible];
     return YES;
 }

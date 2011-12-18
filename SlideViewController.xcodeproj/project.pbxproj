@@ -13,6 +13,13 @@
 		D08129C1149E901F00922542 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D08129BF149E901F00922542 /* InfoPlist.strings */; };
 		D08129C3149E901F00922542 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D08129C2149E901F00922542 /* main.m */; };
 		D08129C7149E901F00922542 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D08129C6149E901F00922542 /* AppDelegate.m */; };
+		D08129D1149E903F00922542 /* SlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D08129D0149E903F00922542 /* SlideViewController.m */; };
+		D08129D6149E90FC00922542 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D08129D4149E90FC00922542 /* HomeViewController.m */; };
+		D08129D7149E90FC00922542 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D08129D5149E90FC00922542 /* HomeViewController.xib */; };
+		D08129DB149E947000922542 /* MySlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D08129DA149E947000922542 /* MySlideViewController.m */; };
+		D08129E1149E9B3600922542 /* seasrch_bar_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D08129DF149E9B3600922542 /* seasrch_bar_background@2x.png */; };
+		D08129E2149E9B3600922542 /* search_bar_background.png in Resources */ = {isa = PBXBuildFile; fileRef = D08129E0149E9B3600922542 /* search_bar_background.png */; };
+		D08129E4149EAC9700922542 /* SlideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D08129E3149EAC9700922542 /* SlideViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +27,22 @@
 		D08129B6149E901F00922542 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D08129B8149E901F00922542 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D08129BA149E901F00922542 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		D08129BE149E901F00922542 /* SlideViewController-Info.plist */ = {isa = PBXFileReference; path = "SlideViewController-Info.plist"; sourceTree = "<group>"; };
+		D08129BE149E901F00922542 /* SlideViewController-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SlideViewController-Info.plist"; sourceTree = "<group>"; };
 		D08129C0149E901F00922542 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D08129C2149E901F00922542 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D08129C4149E901F00922542 /* SlideViewController-Prefix.pch */ = {isa = PBXFileReference; path = "SlideViewController-Prefix.pch"; sourceTree = "<group>"; };
-		D08129C5149E901F00922542 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		D08129C4149E901F00922542 /* SlideViewController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SlideViewController-Prefix.pch"; sourceTree = "<group>"; };
+		D08129C5149E901F00922542 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D08129C6149E901F00922542 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D08129CF149E903F00922542 /* SlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideViewController.h; sourceTree = "<group>"; };
+		D08129D0149E903F00922542 /* SlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideViewController.m; sourceTree = "<group>"; };
+		D08129D3149E90FC00922542 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		D08129D4149E90FC00922542 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		D08129D5149E90FC00922542 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		D08129D9149E947000922542 /* MySlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySlideViewController.h; sourceTree = "<group>"; };
+		D08129DA149E947000922542 /* MySlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySlideViewController.m; sourceTree = "<group>"; };
+		D08129DF149E9B3600922542 /* seasrch_bar_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "seasrch_bar_background@2x.png"; sourceTree = "<group>"; };
+		D08129E0149E9B3600922542 /* search_bar_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search_bar_background.png; sourceTree = "<group>"; };
+		D08129E3149EAC9700922542 /* SlideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SlideViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +89,10 @@
 		D08129BC149E901F00922542 /* SlideViewController */ = {
 			isa = PBXGroup;
 			children = (
-				D08129C5149E901F00922542 /* AppDelegate.h */,
-				D08129C6149E901F00922542 /* AppDelegate.m */,
+				D08129D2149E90DA00922542 /* HomeViewController */,
+				D08129CE149E902E00922542 /* SlideViewController */,
+				D08129D8149E945500922542 /* MySlideViewController */,
+				D08129CD149E902300922542 /* Application Delegate */,
 				D08129BD149E901F00922542 /* Supporting Files */,
 			);
 			path = SlideViewController;
@@ -88,6 +107,54 @@
 				D08129C4149E901F00922542 /* SlideViewController-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D08129CD149E902300922542 /* Application Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				D08129C5149E901F00922542 /* AppDelegate.h */,
+				D08129C6149E901F00922542 /* AppDelegate.m */,
+			);
+			name = "Application Delegate";
+			sourceTree = "<group>";
+		};
+		D08129CE149E902E00922542 /* SlideViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D08129DC149E9ABB00922542 /* Assets */,
+				D08129CF149E903F00922542 /* SlideViewController.h */,
+				D08129D0149E903F00922542 /* SlideViewController.m */,
+				D08129E3149EAC9700922542 /* SlideViewController.xib */,
+			);
+			name = SlideViewController;
+			sourceTree = "<group>";
+		};
+		D08129D2149E90DA00922542 /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D08129D3149E90FC00922542 /* HomeViewController.h */,
+				D08129D4149E90FC00922542 /* HomeViewController.m */,
+				D08129D5149E90FC00922542 /* HomeViewController.xib */,
+			);
+			name = HomeViewController;
+			sourceTree = "<group>";
+		};
+		D08129D8149E945500922542 /* MySlideViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D08129D9149E947000922542 /* MySlideViewController.h */,
+				D08129DA149E947000922542 /* MySlideViewController.m */,
+			);
+			name = MySlideViewController;
+			sourceTree = "<group>";
+		};
+		D08129DC149E9ABB00922542 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				D08129DF149E9B3600922542 /* seasrch_bar_background@2x.png */,
+				D08129E0149E9B3600922542 /* search_bar_background.png */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +209,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D08129C1149E901F00922542 /* InfoPlist.strings in Resources */,
+				D08129D7149E90FC00922542 /* HomeViewController.xib in Resources */,
+				D08129E1149E9B3600922542 /* seasrch_bar_background@2x.png in Resources */,
+				D08129E2149E9B3600922542 /* search_bar_background.png in Resources */,
+				D08129E4149EAC9700922542 /* SlideViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +225,9 @@
 			files = (
 				D08129C3149E901F00922542 /* main.m in Sources */,
 				D08129C7149E901F00922542 /* AppDelegate.m in Sources */,
+				D08129D1149E903F00922542 /* SlideViewController.m in Sources */,
+				D08129D6149E90FC00922542 /* HomeViewController.m in Sources */,
+				D08129DB149E947000922542 /* MySlideViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
