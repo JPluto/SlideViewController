@@ -1,0 +1,262 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D08129B7149E901F00922542 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D08129B6149E901F00922542 /* UIKit.framework */; };
+		D08129B9149E901F00922542 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D08129B8149E901F00922542 /* Foundation.framework */; };
+		D08129BB149E901F00922542 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D08129BA149E901F00922542 /* CoreGraphics.framework */; };
+		D08129C1149E901F00922542 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D08129BF149E901F00922542 /* InfoPlist.strings */; };
+		D08129C3149E901F00922542 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D08129C2149E901F00922542 /* main.m */; };
+		D08129C7149E901F00922542 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D08129C6149E901F00922542 /* AppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D08129B2149E901F00922542 /* SlideViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D08129B6149E901F00922542 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D08129B8149E901F00922542 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D08129BA149E901F00922542 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D08129BE149E901F00922542 /* SlideViewController-Info.plist */ = {isa = PBXFileReference; path = "SlideViewController-Info.plist"; sourceTree = "<group>"; };
+		D08129C0149E901F00922542 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D08129C2149E901F00922542 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D08129C4149E901F00922542 /* SlideViewController-Prefix.pch */ = {isa = PBXFileReference; path = "SlideViewController-Prefix.pch"; sourceTree = "<group>"; };
+		D08129C5149E901F00922542 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		D08129C6149E901F00922542 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D08129AF149E901F00922542 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D08129B7149E901F00922542 /* UIKit.framework in Frameworks */,
+				D08129B9149E901F00922542 /* Foundation.framework in Frameworks */,
+				D08129BB149E901F00922542 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D08129A7149E901F00922542 = {
+			isa = PBXGroup;
+			children = (
+				D08129BC149E901F00922542 /* SlideViewController */,
+				D08129B5149E901F00922542 /* Frameworks */,
+				D08129B3149E901F00922542 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D08129B3149E901F00922542 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D08129B2149E901F00922542 /* SlideViewController.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D08129B5149E901F00922542 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D08129B6149E901F00922542 /* UIKit.framework */,
+				D08129B8149E901F00922542 /* Foundation.framework */,
+				D08129BA149E901F00922542 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D08129BC149E901F00922542 /* SlideViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D08129C5149E901F00922542 /* AppDelegate.h */,
+				D08129C6149E901F00922542 /* AppDelegate.m */,
+				D08129BD149E901F00922542 /* Supporting Files */,
+			);
+			path = SlideViewController;
+			sourceTree = "<group>";
+		};
+		D08129BD149E901F00922542 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D08129BE149E901F00922542 /* SlideViewController-Info.plist */,
+				D08129BF149E901F00922542 /* InfoPlist.strings */,
+				D08129C2149E901F00922542 /* main.m */,
+				D08129C4149E901F00922542 /* SlideViewController-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D08129B1149E901F00922542 /* SlideViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D08129CA149E901F00922542 /* Build configuration list for PBXNativeTarget "SlideViewController" */;
+			buildPhases = (
+				D08129AE149E901F00922542 /* Sources */,
+				D08129AF149E901F00922542 /* Frameworks */,
+				D08129B0149E901F00922542 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SlideViewController;
+			productName = SlideViewController;
+			productReference = D08129B2149E901F00922542 /* SlideViewController.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D08129A9149E901F00922542 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "WillowTree Apps";
+			};
+			buildConfigurationList = D08129AC149E901F00922542 /* Build configuration list for PBXProject "SlideViewController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D08129A7149E901F00922542;
+			productRefGroup = D08129B3149E901F00922542 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D08129B1149E901F00922542 /* SlideViewController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D08129B0149E901F00922542 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D08129C1149E901F00922542 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D08129AE149E901F00922542 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D08129C3149E901F00922542 /* main.m in Sources */,
+				D08129C7149E901F00922542 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D08129BF149E901F00922542 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D08129C0149E901F00922542 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D08129C8149E901F00922542 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D08129C9149E901F00922542 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D08129CB149E901F00922542 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SlideViewController/SlideViewController-Prefix.pch";
+				INFOPLIST_FILE = "SlideViewController/SlideViewController-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D08129CC149E901F00922542 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SlideViewController/SlideViewController-Prefix.pch";
+				INFOPLIST_FILE = "SlideViewController/SlideViewController-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D08129AC149E901F00922542 /* Build configuration list for PBXProject "SlideViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D08129C8149E901F00922542 /* Debug */,
+				D08129C9149E901F00922542 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D08129CA149E901F00922542 /* Build configuration list for PBXNativeTarget "SlideViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D08129CB149E901F00922542 /* Debug */,
+				D08129CC149E901F00922542 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D08129A9149E901F00922542 /* Project object */;
+}
