@@ -263,7 +263,7 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
 
-    if (_slideNavigationControllerState == kSlideNavigationControllerStateDrilledDown)
+    if (_slideNavigationControllerState == kSlideNavigationControllerStateDrilledDown || _slideNavigationControllerState == kSlideNavigationControllerStateSearching)
         return;
     
     UITouch *touch = [touches anyObject];
