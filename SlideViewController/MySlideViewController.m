@@ -20,10 +20,58 @@
     
     if (self) {
         
+        //creating _searchDatasource for later use!
         _searchDatasource = [NSMutableArray new];
         
         NSMutableArray *datasource = [NSMutableArray array];
         
+        /*
+        Here's the fun part. What we need to do is creat a datasource array that uses this structure
+         
+         <Array>
+            <Dictionary><!--represents a section in the table-->
+                
+                <!--This will be displayed as the text in section header. You could also use kSlideViewControllerSectionTitleNoTitle for the value-->
+                <key>kSlideViewControllerSectionTitleKey</key>
+                <value>My Section Header Text</value>
+            
+                <!--This will be the rows of that section.-->
+                <key>kSlideViewControllerSectionViewControllersKey</key>
+                <value>
+                    <Array>
+         
+                        <Dictionary>
+         
+                            <!--this will be the title for the row-->
+                            <key>kSlideViewControllerViewControllerTitleKey</key>
+                            <value>My Text</value>
+         
+                            <!--This is the view controller class that should be created / displayed when this row is clicked-->
+                            <key>kSlideViewControllerViewControllerClassKey</key>
+                            <value>[MyViewControllerSubclass class]</value>
+                            
+                            <!--If you're using nibs, include the nib name in this key-->
+                            <key>kSlideViewControllerViewControllerNibNameKey</key>
+                            <value>MyViewControllerSubclass</value>
+                            
+                            <!--Include a UIImage with this key to have an icon for the row -->
+                            <key>kSlideViewControllerViewControllerIconKey</key>
+                            <value>*UIImage*</value>
+         
+                            <!--This gets passed along with the configureViewController:userInfo: method if you implement it-->
+                            <key>kSlideViewControllerViewControllerUserInfoKey</key>
+                            <value>anything you want</value>
+         
+                        </Dictionary>
+         
+                    </Array>
+                </value>
+         
+            </Dictionary><!--end table section-->
+         </Array>
+        
+         
+         */
         NSMutableDictionary *sectionOne = [NSMutableDictionary dictionary];
         [sectionOne setObject:kSlideViewControllerSectionTitleNoTitle forKey:kSlideViewControllerSectionTitleKey];
         
